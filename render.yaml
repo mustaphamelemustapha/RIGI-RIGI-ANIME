@@ -15,16 +15,13 @@ services:
           name: animevault-db
           property: connectionString
 
-  - type: static_site
-    name: rigirigianime-frontend
+staticSites:
+  - name: rigirigianime-frontend
     buildCommand: ""
     publishDir: "."
-
 
 databases:
   - name: animevault-db
     databaseName: animevault
     user: vault_admin
     plan: free
-
-
