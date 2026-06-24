@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jujutsu Kaisen 0 | RIGI RIGI ANIME</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(31, 40, 51, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .cyber-glow:hover {
+            box-shadow: 0 0 20px rgba(60, 220, 209, 0.3);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b141e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3c4948;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #62f9ee;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-custom {
+            animation: spin 1s linear infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#62f9ee",
+                        "primary-container": "#62f9ee",
+                        "on-secondary": "#3e1975",
+                        "outline-variant": "#3c4948",
+                        "surface-variant": "#2c3541",
+                        "secondary-fixed": "#ebdcff",
+                        "surface-dim": "#0b141e",
+                        "on-secondary-fixed-variant": "#55338d",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#00716b",
+                        "outline": "#859491",
+                        "on-secondary-fixed": "#270058",
+                        "on-tertiary": "#003735",
+                        "on-surface-variant": "#bacac7",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#28313c",
+                        "tertiary": "#ffffff",
+                        "on-tertiary-container": "#00706d",
+                        "secondary-container": "#55338d",
+                        "on-primary": "#003734",
+                        "on-secondary-container": "#c6a5ff",
+                        "primary-fixed-dim": "#3cdcd1",
+                        "surface": "#0b141e",
+                        "on-tertiary-fixed-variant": "#00504d",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-bright": "#313a45",
+                        "tertiary-container": "#98f2ed",
+                        "tertiary-fixed": "#98f2ed",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#060f19",
+                        "on-error": "#690005",
+                        "surface-container-low": "#131c27",
+                        "surface-container": "#17202b",
+                        "surface-container-highest": "#2c3541",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#3cdcd1",
+                        "secondary": "#d4bbff",
+                        "tertiary-fixed-dim": "#7bd6d1",
+                        "on-surface": "#dae3f2",
+                        "on-primary-fixed-variant": "#00504b",
+                        "background": "#0b141e",
+                        "secondary-fixed-dim": "#d4bbff",
+                        "surface-container-high": "#222b36",
+                        "inverse-primary": "#006a64",
+                        "on-background": "#dae3f2",
+                        "inverse-surface": "#dae3f2",
+                        "on-primary-fixed": "#00201e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container/60 backdrop-blur-[40px] border-b border-white/10">
+<div class="flex justify-between items-center h-20 px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-headline-md text-headline-md font-extrabold tracking-tighter text-primary-fixed" href="#">RIGI RIGI ANIME<a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary-fixed font-bold border-b-2 border-primary-fixed pb-1 font-label-caps text-label-caps" href="#">Movies</a>
+<a class="text-on-surface-variant font-medium font-label-caps text-label-caps hover:text-primary-fixed transition-all duration-300" href="#">Series</a>
+<a class="text-on-surface-variant font-medium font-label-caps text-label-caps hover:text-primary-fixed transition-all duration-300" href="#">Genres</a>
+<a class="text-on-surface-variant font-medium font-label-caps text-label-caps hover:text-primary-fixed transition-all duration-300" href="#">Top IMDB</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 w-64 focus:ring-1 focus:ring-primary-fixed text-body-md font-body-md transition-all" placeholder="Search Vault..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-fixed transition-colors text-[28px]" data-icon="account_circle">account_circle</button>
+</div>
+</div>
+</nav>
+<!-- Hero / Banner -->
+<header class="relative w-full h-[614px] overflow-hidden mt-20">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center scale-110 blur-[8px] opacity-40 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPWPIFPAZ_TV5fpv-td08dpGFoRLEoYwBiJ9r8f4hop4Xqve95P6iCFi13BUq_AbPa_y1Say7ZP7FHtLurCXfIrAZwlmMlRcndBmp4o051vJ_KGED64OyScPM4P5k-Cn_8RhAOqFibMfLm6d4Fw5dLajXBsXo1V9Z_WEyNeQjVSqPAwztAaQyUW7EJkp2FTYwc0pfuM7Jw65GGH0ENToWxJlm_dmgSekI9XcFdrLxavYcIBNRLTyew7OXBi4sW3H9FenUCNJzAF7NK')"></div>
+</div>
+<div class="relative z-20 h-full flex flex-col justify-end px-margin-desktop max-w-container-max mx-auto pb-16">
+<div class="flex items-center gap-4 mb-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary font-label-caps text-label-caps rounded">MOVIE</span>
+<span class="px-3 py-1 bg-surface-container-highest text-primary-fixed font-label-caps text-label-caps rounded border border-primary-fixed/20">UHD 4K</span>
+<span class="px-3 py-1 bg-surface-container-highest text-primary-fixed font-label-caps text-label-caps rounded border border-primary-fixed/20">PG-13</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-white mb-4 leading-tight tracking-tight uppercase">Jujutsu Kaisen 0</h1>
+<div class="flex items-center gap-6 text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">star</span> 8.9</span>
+<span>2021</span>
+<span>1h 45m</span>
+<span>Action, Supernatural</span>
+</div>
+</div>
+</header>
+<!-- Main Content Section -->
+<main class="px-margin-desktop max-w-container-max mx-auto -mt-12 relative z-30 mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: Poster & Tech Specs -->
+<div class="lg:col-span-4 space-y-gutter">
+<div class="glass-card rounded-xl overflow-hidden aspect-[2/3] shadow-2xl group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrsCeLH5ndrgxUz3pOnaj6-Qj8SLG-dhvWcWYtoiNq5UKBDHfqjpZ1kOKu7PIp9ch7Hztbrs3JMU1gAq1X9ZPE9AG3TGJ5hsEXQ3vbMKX9s7omEGiRqOuCBl9lC_tkuJJcoO8hDgkdFb8Caqk1FIbg52RYSUZkjwE-sGMAAj1dETGTOpZ3IzgNc772OgZqI6PNIX7jpkSmgYE3Jv5nnZAAV3IVDncK6d8jNIu6blp5t7IbugU3ILEE3f3vumzOfVDe6GU6VAQJVKRZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-4 bg-primary-fixed text-on-primary font-label-caps text-label-caps rounded-lg font-bold flex items-center justify-center gap-2 cyber-glow">
+<span class="material-symbols-outlined">play_arrow</span> WATCH TRAILER
+                    </button>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8 space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary-fixed border-b border-white/10 pb-4">Technical Specs</h3>
+<div class="space-y-4" data-api-source="movie_metadata">
+<div class="flex justify-between items-center group/spec">
+<span class="text-on-surface-variant font-label-caps text-label-caps group-hover/spec:text-primary-fixed transition-colors">FILE SIZE</span>
+<span class="font-mono text-primary-fixed font-bold" data-bind="file_size">4.2 GB</span>
+</div>
+<div class="flex justify-between items-center group/spec">
+<span class="text-on-surface-variant font-label-caps text-label-caps group-hover/spec:text-primary-fixed transition-colors">AUDIO</span>
+<span class="text-on-surface text-right" data-bind="audio_tracks">Japanese (Original), English</span>
+</div>
+<div class="flex justify-between items-center group/spec">
+<span class="text-on-surface-variant font-label-caps text-label-caps group-hover/spec:text-primary-fixed transition-colors">SUBTITLES</span>
+<span class="text-on-surface text-right" data-bind="subtitle_tracks">English, Spanish, French</span>
+</div>
+<div class="flex justify-between items-center group/spec">
+<span class="text-on-surface-variant font-label-caps text-label-caps group-hover/spec:text-primary-fixed transition-colors">CODEC</span>
+<span class="font-mono text-on-surface" data-bind="video_codec">HEVC x265</span>
+</div>
+<div class="flex justify-between items-center group/spec">
+<span class="text-on-surface-variant font-label-caps text-label-caps group-hover/spec:text-primary-fixed transition-colors">BITRATE</span>
+<span class="font-mono text-on-surface" data-bind="avg_bitrate">18.5 Mbps</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Details & Trailer -->
+<div class="lg:col-span-8 space-y-gutter">
+<div class="glass-card rounded-xl p-10 space-y-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-white mb-6 flex items-center gap-3">
+<span class="w-2 h-8 bg-primary-fixed rounded-full"></span>
+                        Synopsis
+                    </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+                        Yuta Okkotsu is a nervous high school student who is suffering from a serious problem—his childhood friend Rika has turned into a Curse and won't leave him alone. Since Rika is no ordinary Curse, his plight is noticed by Satoru Gojo, a teacher at Jujutsu High, a school where fledgling exorcists learn how to combat Curses. Gojo convinces Yuta to enroll, but can he learn enough in time to confront the Curse that haunts him?
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-white/10">
+<div>
+<p class="text-on-surface-variant font-label-caps text-label-caps mb-1">STUDIO</p>
+<p class="text-primary-fixed font-bold font-headline-md text-[18px]">MAPPA</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-caps text-label-caps mb-1">DIRECTOR</p>
+<p class="text-white font-medium">Sunghoo Park</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-caps text-label-caps mb-1">RELEASE</p>
+<p class="text-white font-medium">Dec 24, 2021</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-caps text-label-caps mb-1">RATING</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-white font-bold">8.9/10</span>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-white mb-6">Official Trailer</h2>
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest relative group border border-white/5 shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwvC2CIDgGsFKxkou14WhYJ0J5IVYrkzoCY0SRN5V4DfwAOnAKTqtG5YuG29eZCHl6sCZTOpVU6-e_UPg7HJp-Qsd5AP93kNvVsKhDqdponNaxXHc0SlmQNdRWCkd8e9w_O9agIF5U62OHxBonMhyG01BZZRmp3vvhQ2d51S-AUpzQt4yO1U_yFO_WzWR32YjQQ4xxblCShC5bmDj6pRJZnMpnLE8iz6_o2ybHIDTcglgC49ePUTw8qiRB2iDwHCQAf4UQ2ftIThW0')"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-colors">
+<button class="w-20 h-20 rounded-full bg-primary-fixed/90 flex items-center justify-center text-on-primary-container scale-100 group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(60,220,209,0.4)]">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Download Matrix Section -->
+<section class="mt-24" data-api-endpoint="/api/v1/movies/jujutsu-kaisen-0/download">
+<div class="flex items-center justify-between mb-10">
+<h2 class="font-display-lg text-headline-md text-white">Available Downloads</h2>
+<div class="flex gap-4">
+<span class="flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+<span class="w-3 h-3 rounded-full bg-primary-fixed shadow-[0_0_5px_#62f9ee]"></span> HIGH SPEED
+                </span>
+<span class="flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_5px_#d4bbff]"></span> SECURE
+                </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" id="download-matrix">
+<!-- 2160p (4K) Row -->
+<div class="glass-card rounded-xl p-8 border-l-4 border-primary-fixed hover:border-l-8 transition-all group" data-resolution="2160p">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h4 class="font-headline-md text-headline-md text-white">Ultra HD</h4>
+<span class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 text-[10px] font-bold tracking-wider border border-green-500/20 uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span> Online
+                            </span>
+</div>
+<p class="text-primary-fixed font-mono font-bold">2160p (4K)</p>
+</div>
+<span class="material-symbols-outlined text-primary-fixed text-[40px]">high_quality</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center justify-between py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-caps text-label-caps">FILE SIZE</span>
+<span class="text-white font-mono" data-bind="size">12.4 GB</span>
+</li>
+<li class="flex items-center justify-between py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-caps text-label-caps">MIRROR</span>
+<span class="text-on-surface" data-bind="mirror_name">AnimeCloud Fast</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-primary-fixed text-on-primary font-label-caps text-label-caps rounded-lg font-bold cyber-glow flex items-center justify-center gap-2 transition-all relative overflow-hidden group/btn" onclick="handleDownload(this)">
+<span class="btn-content flex items-center gap-2">
+<span class="material-symbols-outlined">download</span> DOWNLOAD NOW
+                    </span>
+<span class="btn-loader hidden absolute inset-0 flex items-center justify-center bg-primary-fixed">
+<span class="material-symbols-outlined animate-spin-custom">sync</span>
+<span class="ml-2">CONNECTING...</span>
+</span>
+</button>
+</div>
+<!-- 1080p Row -->
+<div class="glass-card rounded-xl p-8 border-l-4 border-secondary hover:border-l-8 transition-all group" data-resolution="1080p">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h4 class="font-headline-md text-headline-md text-white">Full HD</h4>
+<span class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-400 text-[10px] font-bold tracking-wider border border-orange-500/20 uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span> Slow
+                            </span>
+</div>
+<p class="text-secondary font-mono font-bold">1080p</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[40px]">hd</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center justify-between py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-caps text-label-caps">FILE SIZE</span>
+<span class="text-white font-mono" data-bind="size">4.2 GB</span>
+</li>
+<li class="flex items-center justify-between py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-caps text-label-caps">MIRROR</span>
+<span class="text-on-surface" data-bind="mirror_name">Vault CDN</span>
+</li>
+</ul>
+<button class="w-full py-4 border-2 border-secondary text-secondary font-label-caps text-label-caps rounded-lg font-bold hover:bg-secondary hover:text-on-secondary transition-all flex items-center justify-center gap-2 relative overflow-hidden group/btn" onclick="handleDownload(this)">
+<span class="btn-content flex items-center gap-2">
+<span class="material-symbols-outlined">download</span> DOWNLOAD NOW
+                    </span>
+<span class="btn-loader hidden absolute inset-0 flex items-center justify-center bg-secondary text-on-secondary">
+<span class="material-symbols-outlined animate-spin-custom">sync</span>
+<span class="ml-2">CONNECTING...</span>
+</span>
+</button>
+</div>
+<!-- Failed Mirror / Offline State -->
+<div class="glass-card rounded-xl p-8 border-l-4 border-outline-variant opacity-60 grayscale-[0.5] transition-all group" data-resolution="720p">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h4 class="font-headline-md text-headline-md text-white/50">HD Ready</h4>
+<span class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 text-[10px] font-bold tracking-wider border border-red-500/20 uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400"></span> Link Offline
+                            </span>
+</div>
+<p class="text-on-surface-variant font-mono font-bold">720p</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[40px]">video_file</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center justify-between py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-caps text-label-caps">FILE SIZE</span>
+<span class="text-white/50 font-mono">1.8 GB</span>
+</li>
+<li class="flex items-center justify-between py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-caps text-label-caps">MIRROR</span>
+<span class="text-white/50">Legacy Host</span>
+</li>
+</ul>
+<button class="w-full py-4 border-2 border-outline-variant text-outline-variant font-label-caps text-label-caps rounded-lg font-bold cursor-not-allowed flex items-center justify-center gap-2" disabled="">
+<span class="material-symbols-outlined">link_off</span> UNAVAILABLE
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background border-t border-outline-variant w-full py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<h2 class="font-headline-md text-headline-md text-primary">RIGI RIGI ANIME</h2>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Your ultimate destination for high-fidelity anime streaming and digital preservation. Experience animation in its purest form.
+            </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-2">Platform</h4>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors opacity-80" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors opacity-80" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors opacity-80" href="#">DMCA</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-2">Community</h4>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors opacity-80" href="#">Contact Us</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors opacity-80" href="#">FAQ</a>
+<div class="mt-4 text-on-surface-variant font-label-caps text-label-caps opacity-60">
+                © 2024 RIGI RIGI ANIME. All rights reserved. High-fidelity streaming protocol.
+            </div>
+</div>
+</div>
+</footer>
+<script>
+    // Download Interaction Handler
+    function handleDownload(btn) {
+        const content = btn.querySelector('.btn-content');
+        const loader = btn.querySelector('.btn-loader');
+        
+        // Toggle states
+        content.classList.add('invisible');
+        loader.classList.remove('hidden');
+        btn.disabled = true;
+        
+        // Simulate API Handshake
+        setTimeout(() => {
+            // In a real scenario, this would redirect to the API-provided mirror link
+            // For now, reset for visual demonstration
+            content.classList.remove('invisible');
+            loader.classList.add('hidden');
+            btn.disabled = false;
+        }, 3000);
+    }
+
+    // Micro-interaction for buttons
+    document.querySelectorAll('button:not([disabled])').forEach(button => {
+        button.addEventListener('mousedown', () => {
+            button.style.transform = 'scale(0.98)';
+        });
+        button.addEventListener('mouseup', () => {
+            button.style.transform = 'scale(1)';
+        });
+    });
+
+    // Smooth scroll reveal for sections
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('main > *').forEach(section => {
+        section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    });
+</script>
+</body></html>

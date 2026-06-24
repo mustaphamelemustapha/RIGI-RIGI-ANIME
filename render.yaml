@@ -1,0 +1,22 @@
+# Render Infrastructure Blueprint Configuration
+services:
+  - type: web
+    name: animevault-api
+    env: docker
+    plan: starter
+    region: oregon
+    envVars:
+      - key: ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: animevault-db
+          property: connectionString
+
+databases:
+  - name: animevault-db
+    databaseName: animevault
+    user: vault_admin
+    plan: starter

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "anime-movie-bridge": {
+      "command": "python3",
+      "args": [
+        "/Users/mustaphamelemustapha/Code/Anime movie/mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "/Users/mustaphamelemustapha/Code/Anime movie"
+      }
+    }
+  }
+}
