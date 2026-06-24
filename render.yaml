@@ -19,7 +19,8 @@ services:
     name: rigirigianime-frontend
     env: static
     buildCommand: ""
-    publishPath: "."
+    publishDir: "."
+
 
 databases:
   - name: animevault-db
