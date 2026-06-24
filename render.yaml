@@ -15,7 +15,7 @@ services:
           name: animevault-db
           property: connectionString
 
-  - type: static
+  - type: web
     name: rigirigianime-frontend
     env: static
     buildCommand: ""
