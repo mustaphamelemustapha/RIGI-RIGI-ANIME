@@ -19,5 +19,6 @@ databases:
   - name: animevault-db
     databaseName: animevault
     user: vault_admin
-    plan: basic
+    plan: free
+
 
