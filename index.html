@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RIGI RIGI ANIME | Premium Anime Streaming &amp; Downloads</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400&amp;family=Geist:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(31, 40, 51, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(0deg, #0b141e 0%, rgba(11, 20, 30, 0.4) 50%, rgba(11, 20, 30, 0) 100%);
+        }
+        .cyan-glow:hover {
+            box-shadow: 0 0 20px rgba(60, 220, 209, 0.3);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b141e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3c4948;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #66FCF1;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .skeleton {
+            background: linear-gradient(90deg, #17202b 25%, #2c3541 50%, #17202b 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite linear;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#270058",
+                        "surface-tint": "#3cdcd1",
+                        "on-background": "#dae3f2",
+                        "inverse-on-surface": "#28313c",
+                        "inverse-primary": "#006a64",
+                        "surface-container-low": "#131c27",
+                        "background": "#0b141e",
+                        "secondary-container": "#55338d",
+                        "primary-container": "#62f9ee",
+                        "on-error": "#690005",
+                        "secondary": "#d4bbff",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#7bd6d1",
+                        "tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#55338d",
+                        "surface-container-high": "#222b36",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#bacac7",
+                        "primary-fixed-dim": "#3cdcd1",
+                        "surface-container-highest": "#2c3541",
+                        "tertiary-fixed": "#98f2ed",
+                        "secondary-fixed-dim": "#d4bbff",
+                        "on-tertiary-fixed-variant": "#00504d",
+                        "on-tertiary": "#003735",
+                        "on-primary-fixed-variant": "#00504b",
+                        "surface-variant": "#2c3541",
+                        "surface-bright": "#313a45",
+                        "outline": "#859491",
+                        "surface-container": "#17202b",
+                        "on-tertiary-container": "#00706d",
+                        "inverse-surface": "#dae3f2",
+                        "surface-dim": "#0b141e",
+                        "on-primary-container": "#00716b",
+                        "on-primary": "#003734",
+                        "on-secondary": "#3e1975",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#ebdcff",
+                        "outline-variant": "#3c4948",
+                        "on-secondary-container": "#c6a5ff",
+                        "primary-fixed": "#62f9ee",
+                        "tertiary-container": "#98f2ed",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-container-lowest": "#060f19",
+                        "on-surface": "#dae3f2",
+                        "on-primary-fixed": "#00201e",
+                        "surface": "#0b141e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Geist"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-[100] bg-surface-container/60 backdrop-blur-[40px] border-b border-white/10 shadow-[0_0_20px_rgba(60,220,209,0.1)]">
+<div class="flex justify-between items-center h-20 px-margin-desktop w-full max-w-container-max mx-auto relative">
+<div class="flex items-center gap-12">
+<a class="font-headline-md text-headline-md font-extrabold tracking-tighter text-primary-fixed" href="#">RIGI RIGI ANIME</a>
+<div class="hidden md:flex gap-8">
+<a class="text-primary-fixed font-bold border-b-2 border-primary-fixed pb-1 font-label-caps text-label-caps transition-all duration-300" href="#">Movies</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed transition-all duration-300 font-label-caps text-label-caps" href="#">Series</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed transition-all duration-300 font-label-caps text-label-caps" href="#">Genres</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-fixed transition-all duration-300 font-label-caps text-label-caps" href="#">Top IMDB</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block group">
+<div class="relative">
+<input class="bg-surface-variant border-none rounded-full px-6 py-2 w-64 text-sm focus:ring-1 focus:ring-primary-fixed-dim placeholder:text-outline transition-all duration-300" id="navSearchInput" placeholder="Search movies..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-2.5 text-outline text-lg" data-icon="search">search</span>
+</div>
+<!-- Search Results Dropdown -->
+<div class="hidden absolute top-full right-0 mt-2 w-[400px] glass-card rounded-2xl p-4 shadow-2xl transition-all duration-300 origin-top" id="searchResults">
+<div class="flex flex-col gap-4 py-4" id="searchLoader">
+<div class="flex gap-4 animate-pulse">
+<div class="w-12 h-16 bg-surface-container-highest rounded"></div>
+<div class="flex-1 space-y-2 py-1">
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/4"></div>
+</div>
+</div>
+<div class="flex gap-4 animate-pulse">
+<div class="w-12 h-16 bg-surface-container-highest rounded"></div>
+<div class="flex-1 space-y-2 py-1">
+<div class="h-4 bg-surface-container-highest rounded w-2/3"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/3"></div>
+</div>
+</div>
+</div>
+<div class="hidden space-y-3 max-h-[400px] overflow-y-auto pr-2" id="searchList">
+<!-- Search items injected via JS -->
+</div>
+</div>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-white/5 transition-all duration-200">
+<span class="material-symbols-outlined text-primary-fixed text-2xl" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative w-full h-[921px] overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="Suzume Movie Hero" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNEsrShV7BwgCgMiybUebWrjD6jS_wnQXwH5ZEswRnotKkF8lQnOXuR7W0AKH14jNBAVCTpJQQ8FFbakVW7EnbyxkDuOKo9xHNrplT9vWOQ2QZlhuLoLiT_6c-jLGaJg07J7etWyg0FlNLMcgpofK_VC7705shkQCbKC9yAJMsPe4UUqHIxNTRXEXJwZgjNfvtyJ5j8H2hoRXsil6UoZoD3sy2xS39PR0vBYdU3nfXr1js3ZGv26-JpY1KMvpFiLIbvqsw2NDc_i5Z')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-end pb-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-2xl space-y-6">
+<div class="flex gap-3">
+<span class="px-3 py-1 glass-card rounded-full font-label-caps text-[10px] text-primary-fixed-dim uppercase tracking-widest">Trending #1</span>
+<span class="px-3 py-1 glass-card rounded-full font-label-caps text-[10px] text-secondary uppercase tracking-widest">IMDB 8.8</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-white leading-tight">Suzume no Tojimari</h1>
+<div class="flex gap-4 text-on-surface-variant font-label-caps">
+<span>Adventure</span>
+<span class="text-outline">•</span>
+<span>Fantasy</span>
+<span class="text-outline">•</span>
+<span>2022</span>
+</div>
+<p class="text-body-lg text-on-surface-variant/80 line-clamp-3">
+                A 17-year-old girl named Suzume helps a mysterious young man close doors from the other side that are releasing disasters all over Japan. A breathtaking cinematic journey through memories and survival.
+            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="flex items-center gap-3 bg-primary-fixed text-on-primary-fixed px-8 py-4 rounded-lg font-bold hover:scale-[1.02] transition-all cyan-glow">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                    Direct Download
+                </button>
+<button class="flex items-center gap-3 border border-primary-fixed text-primary-fixed px-8 py-4 rounded-lg font-bold hover:bg-primary-fixed/10 transition-all">
+<span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+                    Watch Trailer
+                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="py-20 space-y-24">
+<!-- Latest Releases -->
+<section class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-white mb-2">Latest Releases</h2>
+<div class="h-1 w-12 bg-primary-fixed"></div>
+</div>
+<a class="text-primary-fixed-dim font-label-caps hover:underline" href="#">View All</a>
+</div>
+<!-- API Grid: Latest -->
+<div class="flex gap-gutter overflow-x-auto pb-8 snap-x no-scrollbar" id="latestGrid">
+<!-- Skeleton items loaded initially -->
+<div class="min-w-[220px] flex-shrink-0 animate-pulse">
+<div class="aspect-[2/3] rounded-xl skeleton"></div>
+<div class="mt-4 space-y-2">
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2"></div>
+</div>
+</div>
+<div class="min-w-[220px] flex-shrink-0 animate-pulse">
+<div class="aspect-[2/3] rounded-xl skeleton"></div>
+<div class="mt-4 space-y-2">
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2"></div>
+</div>
+</div>
+<div class="min-w-[220px] flex-shrink-0 animate-pulse">
+<div class="aspect-[2/3] rounded-xl skeleton"></div>
+<div class="mt-4 space-y-2">
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2"></div>
+</div>
+</div>
+<div class="min-w-[220px] flex-shrink-0 animate-pulse">
+<div class="aspect-[2/3] rounded-xl skeleton"></div>
+<div class="mt-4 space-y-2">
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2"></div>
+</div>
+</div>
+<div class="min-w-[220px] flex-shrink-0 animate-pulse">
+<div class="aspect-[2/3] rounded-xl skeleton"></div>
+<div class="mt-4 space-y-2">
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Section (Static UI Elements, API data could fill some cards) -->
+<section class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter h-auto md:h-[600px]">
+<div class="md:col-span-2 relative group rounded-3xl overflow-hidden cursor-pointer glass-card">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2dwIzvOSgjIHkIJgK3kQFG0MrBGgBU8YPhrl_S4rSVeiGYq-wuSxsdCajrUIpMwnDlT_A0NKR5H9JpIQKaOnQG4urW3UGAC-MyvN8vK7ePE5uj59W6GUa9TOXyB8X0jNiM7AtVpKkJaFA0pa9M4cLNDRKb714KvQAYjsmqNxSCZSEx7VbM0xHS-0Mnr2tSo4fnAOfgsRxRiE9_Ev11SohNzwg3u5sK74SAlU3wKpADh1fUgg4WJcaGjbGLUfqov5Uyq8nq_MYkBxn')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter mb-4 inline-block">Collection of the Month</span>
+<h3 class="text-3xl font-display-lg text-white mb-2">Makoto Shinkai Anthology</h3>
+<p class="text-on-surface-variant max-w-sm">Experience every masterpiece in stunning 4K HDR quality.</p>
+</div>
+</div>
+<div class="md:col-span-2 grid grid-cols-2 grid-rows-2 gap-gutter">
+<div class="relative group rounded-3xl overflow-hidden cursor-pointer glass-card">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvkV7AE8Q2lbk0pN2mYhpqePthabI9gXFNEucVXr4-ws_4zSGdWX6mZtpGQbnzILpkDtZbZOET4UEckDAR8S1AiR6OsURmOLhe2BmiEWC0tuJKdeH91ibN1Av2-cGvZSBi6-quu_0nti_hveDzD7dVcfiNGRPl72RRnbQ3V6CP9M2wZD0szVwimnu2xgvstyhTm3voRxD7hRgPYqMAGJnzQCYF-Jj9JKuxdoV9_arRpfGY1dAKhDKMyARrB-Hrt-WiKT81-j3wy8Su')"></div>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<h4 class="font-bold text-white text-xl">Sci-Fi Classics</h4>
+</div>
+</div>
+<div class="relative group rounded-3xl overflow-hidden cursor-pointer glass-card">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCi_x3yNplZZYZFMMKWx8WBtaryAXdSDyw0H1qQYprxwv2LP49PjV-Prl8q8S8LTG75Cjnbe5KcdW3wJy_qyKKsl6IcaQxg2CLTKtuAw_UKHzzNsLmspc4pZCeCM4Kv4SO0d_BhXlRJ1QyiFsRdggcmoL_B4cTdqe7oke8gvH6ylXt6cepV7iquFdHbdFUf4fTGa4hA52xeiUZmMoAGxnKaJ4X-9WrbTkurIq7tiOIS_SZ4R9EIza8JPRhbsnIP-oW4xXdWXV7WbYCl')"></div>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<h4 class="font-bold text-white text-xl">Top Fantasy</h4>
+</div>
+</div>
+<div class="col-span-2 relative group rounded-3xl overflow-hidden cursor-pointer glass-card">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnrSfwj1PooiBSqOZ_cGSI_iEONki5sorTKbh1ZmSGLLReDw1bMyfpfnIGVVG7L6fM-aWr1wdJHC4VpvHd6vuPXlSNfwS62rqC1XMo54e2_1j8J020Jo2imEHSGVBZQB5XUmoqeyyQw5FUsD-nP4pK-qb1jheVKWBTannAF06BqAs2obyrAQWd0IP-LLipluiUXKO35bfkst_cwK4RUnSCzifuKz2QoAn9d2JAF_2c6aBkcs8vfZLhlttK4EL-YwQM_HiLbZnlWHc9')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+<div class="absolute inset-0 flex items-center px-12">
+<div>
+<h4 class="font-bold text-white text-2xl mb-2">Weekly Highlights</h4>
+<p class="text-on-surface-variant text-sm">Most discussed titles of this week.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Most Downloaded Section -->
+<section class="bg-surface-container-low py-16">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" data-icon="trending_up">trending_up</span>
+<h2 class="font-headline-md text-headline-md text-white">Most Downloaded This Week</h2>
+</div>
+<!-- API Grid: Downloads -->
+<div class="flex gap-gutter overflow-x-auto pb-8 snap-x no-scrollbar" id="downloadsGrid">
+<!-- Skeletons -->
+<div class="min-w-[280px] bg-surface-container p-4 rounded-2xl flex gap-4 animate-pulse">
+<div class="w-20 h-28 skeleton rounded-lg"></div>
+<div class="flex-1 space-y-3 py-1">
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2"></div>
+<div class="h-6 bg-surface-container-highest rounded w-1/3"></div>
+</div>
+</div>
+<div class="min-w-[280px] bg-surface-container p-4 rounded-2xl flex gap-4 animate-pulse">
+<div class="w-20 h-28 skeleton rounded-lg"></div>
+<div class="flex-1 space-y-3 py-1">
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2"></div>
+<div class="h-6 bg-surface-container-highest rounded w-1/3"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-white mb-2">Trending Movies</h2>
+<div class="h-1 w-12 bg-primary-fixed"></div>
+</div>
+</div>
+<!-- API Grid: Trending -->
+<div class="flex gap-gutter overflow-x-auto pb-8 snap-x no-scrollbar" id="trendingGrid">
+<!-- Skeletons -->
+<div class="min-w-[400px] aspect-[16/9] rounded-2xl skeleton animate-pulse"></div>
+<div class="min-w-[400px] aspect-[16/9] rounded-2xl skeleton animate-pulse"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background border-t border-outline-variant w-full py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<a class="font-headline-md text-headline-md text-primary font-extrabold tracking-tighter" href="#">RIGI RIGI ANIME</a>
+<p class="text-on-surface-variant text-sm max-w-xs leading-relaxed">
+                The ultimate destination for high-fidelity anime content. Stream, download, and enjoy the best of Japanese animation in pristine 4K quality.
+            </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="public">public</span>
+</a>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="text-primary font-bold font-label-caps text-label-caps uppercase tracking-widest">Explore</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">Latest Releases</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">Most Downloaded</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">Trending Now</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">Anime TV Series</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">DMCA</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-primary font-bold font-label-caps text-label-caps uppercase tracking-widest">Support</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors text-sm" href="#">FAQ</a></li>
+</ul>
+<div class="pt-4">
+<p class="text-[10px] text-outline uppercase tracking-widest">Streaming Status</p>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_8px_rgba(60,220,209,0.8)]"></div>
+<span class="text-primary-fixed-dim text-xs font-bold">Servers Operational</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-xs font-body-md opacity-80">© 2024 RIGI RIGI ANIME. All rights reserved. High-fidelity streaming protocol.</p>
+<div class="flex gap-6">
+<span class="text-[10px] text-outline font-label-caps">v2.4.0-BETA</span>
+<span class="text-[10px] text-outline font-label-caps">LATENCY: 14ms</span>
+</div>
+</div>
+</footer>
+<script>
+    // Mock API Data
+    const mockMovies = [
+        { id: 1, title: "Cyber City: 2099", year: 2024, rating: 8.9, quality: "4K", genre: "Cyberpunk", synopsis: "A lone character stands under neon cyan and purple lights in a rainy futuristic alley.", poster: "https://lh3.googleusercontent.com/aida-public/AB6AXuA5OP-PTtW5CRPBaHmVy4ghuRxTYvAn2vZrvhNdRGZxyveXIu9olvfWabzs58gaJd34VXC4YCcojWlSMeM-LwPfT5g-kp1uoYoxfH5GKojSsDmIJJ1a2fq4nfsbPC-TFnq0wS0FnJ-bTrae7ePv7xJ5moZF3-rEOyamxIhBNITNe0A5c_s5a9VjsnSlmu2oupy08nZUjmiLTAuD3aLex1wOSnLIM7Nr7flcUghkyjfQ3BzIYdgGdo7IhyQPoqVPEB3AovOaF-9tW3Ii", downloads: "1.2k" },
+        { id: 2, title: "Skyward Realms", year: 2023, rating: 9.2, quality: "1080P", genre: "Fantasy", synopsis: "Breathtaking anime landscape movie poster featuring a floating castle in a sea of clouds.", poster: "https://lh3.googleusercontent.com/aida-public/AB6AXuAXqZH-h-8dpDlsmp5v0e_0-lQ_l4DfpYECJTEn5O3WOvsWGReUoInol9ebhnOBS9Gszpra9WW6uR_1DhpQ6uZsoSvoTb5hfaE4fBbVPMC0DFIPGzN2HN4FqECkByomfZvtv3KwEB5DC8qmshuIpYMVyzETr9uMhuvT2CCXKdtboRwZzv8IVbmL704Dc0iY79xQk4vdLwy5J-L5fWrMVRIM1JDjqMsJ8ObBA2lkadJMFHPXB5CE1fvVHv_CvVBS2D96k_7_FGTTx8Wb", downloads: "980" },
+        { id: 3, title: "Ronin Soul", year: 2024, rating: 8.5, quality: "4K", genre: "Action", synopsis: "Action-packed anime movie poster showing a samurai warrior in a dynamic combat pose.", poster: "https://lh3.googleusercontent.com/aida-public/AB6AXuDwI6lBDnIoEkdYGnNBCl-1kNXIpOOFxpsRhbo1mqjZhqsASp8xLa_h_VvFPAoG4G8TwWSm8D8aa8JDl_PJ8NPLi7kPw598FQqWYrCnE1L5YfZx8rmaaLZYRiZu6IQd7kYmsNXv0PI0cXm0-PRuZqmXHD__5i89Hf9NCDjYPAWbzI0RDb7VDdjxilSD1sWH1W2lGokELbwc3511EiDKlztngptEC-cKEvlo3rCra4ZtxRKv13Rex9gLGturLuiSYS_MoWTpa0U0_uAA", downloads: "1.1k" },
+        { id: 4, title: "Tea Time Memoirs", year: 2024, rating: 9.0, quality: "1080P", genre: "Slice of Life", synopsis: "Whimsical anime poster of a slice-of-life movie in a cozy cafe setting.", poster: "https://lh3.googleusercontent.com/aida-public/AB6AXuBQBYoRJRLMxXLJ74aUewO83Fm0YkNdCUn40UuBTw-f0T6zXt9EuHzS96w337VexSg3RxQb2z5fPjtiRcjvNNFBIqC9D2rcc3iOK124JZklDN0H3S-qyH8cQO4NTJdeJ0yeYKtuRTDZPcRG3qMjLReAEpqNChS4WM_Z7fPr71LbUFQvdKiPM_DKf4bRR-t2l0G3hPyYU0Rj-ca1IeUETqdnjpRbZTRJPvRZfal1zU7LhYRZpgvtAExjJe3sSBq0fdumg1S43km_7AaX", downloads: "850" },
+        { id: 5, title: "Infernal Gate", year: 2024, rating: 7.8, quality: "4K", genre: "Dark Fantasy", synopsis: "Dark fantasy anime movie poster featuring a demonic character with glowing red eyes.", poster: "https://lh3.googleusercontent.com/aida-public/AB6AXuBUJpd0sVtqVMZgNDPtP9ZE-hojivDDHyrtRm1iI-lV3MZzlnwUNxLc00KO8XB6tVBa3-LBPkTTObYlzxRD15_YP7upGgLB1THAxx8_FeeldtFM9xXB3gOHrZ2Qko7LY_UnEyY7b1SRiXT4lS165XWL3ngZREtBFPzaAo1M86xMa477l0h5whPzyTR7tKj3JcKxxuECKt2qHoqk6hcs_-NTKth4UrLBi21jDtr2BLYtZN8rusluZXr6U15p3XMidnAq4ZOcO4BmnkCB", downloads: "1.4k" }
+    ];
+
+    const trendingLarge = [
+        { title: "Dragon Tide: Rebellion", views: "48k views this hour", status: "New Episode Out", poster: "https://lh3.googleusercontent.com/aida-public/AB6AXuAfhRV3E6M00YJP2Gb-HYqIe9j45ZD7dx5vBpSNN4GpZufdRKvzAYhmvsSCanMq5ytq8BeU8d4Ir57cl2dvXmMRCd-0sWZKhFYMwEoLgrwuzlSih2Jz4fqvJIhLpNssfJv1DASwQNOSW2MF7vJ0-242MmNtILA3ualyNP_xUmjPvvFeGe62jT-rXMpvHQtbXXjtpRLe412dS1NlUdwDkS88REULf5ndI7mz5gv0wGWjlK_p9QatcQSGyhPQgVgrPTyK8S7CcUdgswFe" },
+        { title: "Stellar Odyssey", views: "32k views this hour", status: "Trending #2", poster: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3B1c7Cu5ow4eE2nC-c7y0jO2_GiLJOOq0pVo5Bhp0HxF94KeUHXh05_qlSY997f2q_lT1nPku21rHk1PkHwPyU-M2iX62Tqb05HwCqBDlMIuqNLn8bbuDQSVW_HWAdElppuceoqGDn_dmRP6z4l_uQVSjW91twb73VC7LiWTR4zJr7KprtYpDIxAM8SWN6hr3O4JxRKp7UWZF3hCJBWPaLY9v_kthgvdbDwcAWimoOx_UAG-Mvurct2Mg9FrMTcADSQ2Xf1bVCqLT" }
+    ];
+
+    // Component: Vertical Card
+    const createVerticalCard = (movie) => `
+        <div class="min-w-[220px] flex-shrink-0 group cursor-pointer snap-start" onclick="simulateNav(${movie.id})">
+            <div class="relative aspect-[2/3] rounded-xl overflow-hidden glass-card transition-all duration-500 group-hover:scale-[1.03]">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('${movie.poster}')"></div>
+                <div class="absolute top-3 left-3 flex flex-col gap-2">
+                    <span class="bg-primary-container text-on-primary-container text-[10px] font-bold px-2 py-0.5 rounded">${movie.quality}</span>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-black shadow-lg shadow-primary-fixed/50 transform translate-y-4 group-hover:translate-y-0 transition-transform mx-auto mb-3">
+                            <span class="material-symbols-outlined text-3xl">play_circle</span>
+                        </div>
+                        <p class="text-white text-[10px] font-medium line-clamp-2 px-2">${movie.synopsis}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold text-white group-hover:text-primary-fixed transition-colors truncate">${movie.title}</h3>
+                <div class="flex justify-between items-center mt-1 text-on-surface-variant text-xs">
+                    <span>${movie.year} • ${movie.genre}</span>
+                    <div class="flex items-center gap-1 text-primary-fixed">
+                        <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+                        ${movie.rating}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Component: Horizontal Small Card
+    const createDownloadCard = (movie) => `
+        <div class="min-w-[280px] bg-surface-container p-4 rounded-2xl flex gap-4 group cursor-pointer hover:bg-surface-container-high transition-all" onclick="simulateNav(${movie.id})">
+            <div class="w-20 h-28 flex-shrink-0 rounded-lg overflow-hidden relative">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('${movie.poster}')"></div>
+            </div>
+            <div class="flex flex-col justify-between py-1 overflow-hidden">
+                <div>
+                    <h4 class="text-white font-bold truncate group-hover:text-primary-fixed transition-colors">${movie.title}</h4>
+                    <p class="text-xs text-on-surface-variant">${movie.genre}</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs bg-outline-variant text-white px-2 py-0.5 rounded">${movie.downloads} Downloads</span>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Component: Trending Large Card
+    const createTrendingCard = (data) => `
+        <div class="min-w-[400px] aspect-[16/9] rounded-2xl overflow-hidden relative group cursor-pointer">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('${data.poster}')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-6 left-6">
+                <h4 class="text-2xl font-bold text-white mb-1">${data.title}</h4>
+                <div class="flex gap-4 items-center">
+                    <span class="text-primary-fixed font-bold">${data.status}</span>
+                    <span class="text-on-surface-variant text-sm">• ${data.views}</span>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Component: Search Result Item
+    const createSearchItem = (movie) => `
+        <div class="flex items-center gap-4 p-2 rounded-xl hover:bg-white/5 cursor-pointer group transition-all" onclick="simulateNav(${movie.id})">
+            <div class="w-12 h-16 rounded overflow-hidden flex-shrink-0">
+                <img src="${movie.poster}" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h5 class="text-white font-bold text-sm group-hover:text-primary-fixed transition-colors">${movie.title}</h5>
+                <p class="text-on-surface-variant text-xs">${movie.year} • ${movie.genre}</p>
+            </div>
+        </div>
+    `;
+
+    // Initialization
+    window.addEventListener('DOMContentLoaded', () => {
+        // Simulate API Fetch Delay
+        setTimeout(() => {
+            // Render Latest
+            const latestGrid = document.getElementById('latestGrid');
+            latestGrid.innerHTML = mockMovies.map(m => createVerticalCard(m)).join('');
+            
+            // Render Downloads
+            const downloadsGrid = document.getElementById('downloadsGrid');
+            downloadsGrid.innerHTML = [...mockMovies].reverse().map(m => createDownloadCard(m)).join('');
+
+            // Render Trending
+            const trendingGrid = document.getElementById('trendingGrid');
+            trendingGrid.innerHTML = trendingLarge.map(t => createTrendingCard(t)).join('');
+        }, 1200);
+
+        // Functional Search Bar
+        const searchInput = document.getElementById('navSearchInput');
+        const resultsDropdown = document.getElementById('searchResults');
+        const searchLoader = document.getElementById('searchLoader');
+        const searchList = document.getElementById('searchList');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (query.length > 0) {
+                resultsDropdown.classList.remove('hidden');
+                searchLoader.classList.remove('hidden');
+                searchList.classList.add('hidden');
+
+                // Simulate API call delay for /api/v1/search
+                setTimeout(() => {
+                    const filtered = mockMovies.filter(m => m.title.toLowerCase().includes(query));
+                    searchLoader.classList.add('hidden');
+                    searchList.classList.remove('hidden');
+                    
+                    if (filtered.length > 0) {
+                        searchList.innerHTML = filtered.map(m => createSearchItem(m)).join('');
+                    } else {
+                        searchList.innerHTML = `<p class="text-on-surface-variant text-sm text-center py-4">No results found for "${query}"</p>`;
+                    }
+                }, 600);
+            } else {
+                resultsDropdown.classList.add('hidden');
+            }
+        });
+
+        // Close search on click outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !resultsDropdown.contains(e.target)) {
+                resultsDropdown.classList.add('hidden');
+            }
+        });
+
+        // Sticky Navbar logic
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const nav = document.querySelector('nav');
+            if (currentScroll > 100) {
+                nav.classList.add('bg-surface-container/90');
+                nav.classList.remove('bg-surface-container/60');
+            } else {
+                nav.classList.add('bg-surface-container/60');
+                nav.classList.remove('bg-surface-container/90');
+            }
+            lastScroll = currentScroll;
+        });
+    });
+
+    // Helper: Navigation Simulation
+    function simulateNav(id) {
+        console.log(`Navigating to movie ID: ${id}`);
+        // Visual feedback
+        const el = document.body;
+        el.style.opacity = '0.5';
+        setTimeout(() => el.style.opacity = '1', 300);
+    }
+</script>
+</body></html>
+
